@@ -3,6 +3,8 @@
 ***HIGH STEAKS***
 [VIDEO DEMO](https://drive.google.com/file/d/1AICjJZzCdaS4XFplcKh-Zf61H2xyxHTH/view?usp=sharing)
 
+![Demo](https://drive.google.com/file/d/1lmmcd_J_RvdE8VsRrF_Y4l6SptjsdhLL/view?usp=sharing)
+
 Welcome to High Steaks, a fast-paced VR competition game-- dairy cow versus alien. Set deep in the cornfields, an alien pilots a UFO while its dairy-cow counterpart attempts to reach its only hope at safety-- the rocket launcher. With power ups ranging from energy potion to cow pies, High Steaks provides a chase that’s as comedic as it is thrilling. Will the cow reach the farmhouse and shoot the alien from the sky? Or will the alien beam up a nice steak dinner?
 
 
