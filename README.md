@@ -9,29 +9,34 @@ Welcome to High Steaks, a fast-paced VR competition game-- dairy cow versus alie
 High Steaks is implemented in Unreal Engine intended for use with the Vive Pro 2 VR platform. It requires two players and offers a uniquely asymmetrical gameplay experience.
 
 
-===USER GUIDE===
+**===USER GUIDE===**
 
 
 ***INSTRUCTIONS***
-Player 1 (Alien): Select CREATE ROOM to create a shared Game Session. Once Player 2 (Cow) joins, the cow will be spawned somewhere on the farm. It is your goal to locate, chase, and capture the cow with your tractor beam.
-CONTROLS
-Use the back trigger on each controller to grab/click.
-Grab the steering wheel and rotate left or right to rotate your ship.
-On the right hand side, grab the throttle handle and push forward to move your ship. Pull the handle pack to stop.
-On the left hand side, there are 2 buttons-- green and pink. Press the pink button to fire trap-bubbles, which, if overlapping the cow, will slow the cow down as long as the cow is in the bubbles.
-Press the green button to activate the tractor beam. The tractor beam will follow your line of sight. Keep the cow player inside the tractorbeam for 4 seconds, and you win the game.
-Make sure to watch your energy meter. It will deplete as you use your stamina and shoot your slow-down bubbles. If it reaches zero, you won’t be able to use these abilities until it recharges.
-Player 2 (Cow): Select JOIN ROOM once Player 1 (Alien) creates a room. When prompted to join the room, point and click OK. It is your goal to navigate the farm, avoid capture and seek the rocket launcher to shoot the alien out of the sky.
-CONTROLS
-Hold the thumb pads on each controller. Turn in the direction you wish to move, and move your arms in a walking/jogging cycle in order to advance the cow’s position. You may also move with a single arm.
-Use the back trigger button to grab coins, which become surprise powerups and resources. Once you grab this powerup, press the back trigger to fire in your direction of sight.
-Cow pies will temporarily blind the alien. Energy poison will deplete the alien’s energy, temporarily preventing them from using the tractor beam.
-Once you locate the rocket launcher, grab as you would any other powerup. Aim the rocket as described above, and fire at the UFO using the back trigger button. If you hit the UFO, you win-- otherwise, the rocket will spawn in another location.
+### Player 1 (Alien):
+Select CREATE ROOM to create a shared Game Session. Once Player 2 (Cow) joins, the cow will be spawned somewhere on the farm. It is your goal to locate, chase, and capture the cow with your tractor beam.
 
+#### CONTROLS
+- Use the back trigger on each controller to grab/click.
+- Grab the steering wheel and rotate left or right to rotate your ship.
+- On the right hand side, grab the throttle handle and push forward to move your ship. Pull the handle pack to stop.
+- On the left hand side, there are 2 buttons-- green and pink. Press the pink button to fire trap-bubbles, which, if overlapping the cow, will slow the cow down as long as the cow is in the bubbles.
+- Press the green button to activate the tractor beam. The tractor beam will follow your line of sight. Keep the cow player inside the tractorbeam for 4 seconds, and you win the game.
+- Make sure to watch your energy meter. It will deplete as you use your stamina and shoot your slow-down bubbles. If it reaches zero, you won’t be able to use these abilities until it recharges.
 
-Win conditions:
-PLAYER 1 (Alien) wins if they lock the cow in the tractor beam for 5 seconds.
-PLAYER 2 (Cow) wins if they hit the alien ship with the rocket.
+### Player 2 (Cow):
+Select JOIN ROOM once Player 1 (Alien) creates a room. When prompted to join the room, point and click OK. It is your goal to navigate the farm, avoid capture and seek the rocket launcher to shoot the alien out of the sky.
+
+#### CONTROLS
+- Hold the thumb pads on each controller. Turn in the direction you wish to move, and move your arms in a walking/jogging cycle in order to advance the cow’s position. You may also move with a single arm.
+- Use the back trigger button to grab coins, which become surprise powerups and resources. Once you grab this powerup, press the back trigger to fire in your direction of sight.
+- Cow pies will temporarily blind the alien. Energy poison will deplete the alien’s energy, temporarily preventing them from using the tractor beam.
+- Once you locate the rocket launcher, grab as you would any other powerup. Aim the rocket as described above, and fire at the UFO using the back trigger button. If you hit the UFO, you win-- otherwise, the rocket will spawn in another location.
+
+#### Win conditions:
+- PLAYER 1 (Alien) wins if they lock the cow in the tractor beam for 5 seconds.
+- PLAYER 2 (Cow) wins if they hit the alien ship with the rocket.
+
 
 
 ***GAME SETUP DOCUMENTATION***
@@ -52,15 +57,14 @@ Note that both players must be connected to the same network in order for the mu
 After connecting to SteamVR, each player must run the HighSteaks executable on their machine.
 
 
-_The following system requirements are recommended to run Unreal Engine 5.x on Windows._
-Operating system: Windows 10 64-bit (Version 20H2)
-Processor: Six-Core Xeon E5-2643 @ 3.4GHz.
-Memory: 64 GB RAM
-Internal storage: 256 GB SSD
-External Storage: 2TB SSD.
-Graphics Card: NVIDIA GeForce RTX 2080 SUPER+
+## System Specifications
 
-
+- **Operating system:** Windows 10 64-bit (Version 20H2)
+- **Processor:** Six-Core Xeon E5-2643 @ 3.4GHz.
+- **Memory:** 64 GB RAM
+- **Internal storage:** 256 GB SSD
+- **External Storage:** 2TB SSD.
+- **Graphics Card:** NVIDIA GeForce RTX 2080 SUPER+
 
 
 **MAJOR FEATURES**
@@ -122,23 +126,22 @@ Features implemented since the beta demo are listed in bold. Various features, s
 **TECHNICAL ISSUES**
 
 
-VIVE
-Due to base station placement, gameplay views are sometimes disconnected/grayed out.
-Headset sometimes failed to connect with SteamVR and/or see base stations, preventing or delaying gameplay.
-SteamVR sometimes froze and crashed--however, this tended to occur unpredictably. When this occurred, it generally required an OS restart.
-Unreal data synchronization problems
-Players transformation data update problems. 
-Initially, we experienced player transformation lag between the server and client. This is because we didn’t notice Unreal has built in options that allow us to change the data updating rate. Eventually, we increased the refresh rate to make the players movement smoother on both client and server. (This reminds me that the data update lag also happened when we were doing the AR project using Photon Network Plugin. I assume that is also because we didn’t change(or even notice) the refresh rate of updating data between the server and client).
+## Known Issues and Solutions
+
+### VIVE
+- Due to base station placement, gameplay views are sometimes disconnected/grayed out.
+- Headset sometimes failed to connect with SteamVR and/or see base stations, preventing or delaying gameplay.
+- SteamVR sometimes froze and crashed--however, this tended to occur unpredictably. When this occurred, it generally required an OS restart.
+
+### Unreal Data Synchronization Problems
+- Players transformation data update problems.
+  - Initially, we experienced player transformation lag between the server and client. This is because we didn’t notice Unreal has built-in options that allow us to change the data updating rate. Eventually, we increased the refresh rate to make the player's movement smoother on both client and server. (This reminds me that the data update lag also happened when we were doing the AR project using Photon Network Plugin. I assume that is also because we didn’t change (or even notice) the refresh rate of updating data between the server and client).
+
+- Game objects replication problems.
+  - This problem happened when we were doing the win/lose condition features. At the beginning, we had no idea why everything was working perfectly when we were testing on the local single-player mode but multiplayer mode. After referring to a number of Unreal official documents, we understood that every game object needs to be replicated from client to server first and then from server to all clients. Eventually, we implemented a lot of custom events to solve the data replication problems.
 
 
-Game objects replication problems.
-This problem happened when we were doing the win/lose condition features. At the beginning, we had no idea why everything was working perfectly when we were testing on the local single player mode but multiplayer mode. After referring to a number of Unreal official documents,  we understood that every game object needs to be replicated from client to server first and then from server to all clients. Eventually, we implemented a lot of custom events to solve the data replication problems.
-
-
-
-**
-PLUGINS/ASSETS**
-Assets
+**PLUGINS/ASSETS**
 Low Poly Farm Pack - Provided individual, static farm assets including barns, plants, hills, and props. Animations + Level Layout created manually. https://www.unrealengine.com/marketplace/en-US/product/low-poly-farm-pack?sessionInvalidated=true 
 Rigged Little Cow -- https://sketchfab.com/3d-models/rigged-little-cow-4326366e724549ea8cf2369d405481ca 
 
